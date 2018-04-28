@@ -1,0 +1,20 @@
+<table>
+    <tr>
+        <th>Toque ID</th>
+        <th>Name</th>
+        <th>Author ID</th>
+        <th>Author username</th>
+        <th>Audio file</th>
+        <th>Date published</th>
+    </tr>
+    {% for item in allToques %}
+    <tr>
+        <td>{{ item.toque_id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.author_id.user_id }}</td>
+        <td>{{ item.author_username }}</td>
+        <td>{{ item.audio }}</td>
+        <td>{{ item.pub_date }}</td>
+    </tr>
+    {% endfor %}
+</table>
